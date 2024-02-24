@@ -15,6 +15,11 @@ namespace Question3
         public Form1()
         {
             InitializeComponent();
+
+            foreach (var checkbox in groupBox_CheckBoxes.Controls.OfType<CheckBox>())
+            {
+                checkbox.CheckedChanged += groupBox_CheckBoxes_CheckedChange;
+            }
         }
 
         public int firstBox_total = 0;
@@ -22,24 +27,6 @@ namespace Question3
         public int thirdBox_total = 0;
         public int totalAmountDue = 0;
 
-        private void firstGroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         // Final amount label
         private void label2_CheckedChanged(object sender, EventArgs e)
@@ -96,28 +83,20 @@ namespace Question3
         }
 
         // Buttons in third group
-        private void groupBox_CheckBoxes_Click(object sender, EventArgs e)
+        private void groupBox_CheckBoxes_CheckedChange(object sender, EventArgs e)
         {
+            thirdBox_total = 0;
             // Loop through GroupBoxes in groupBox
             // CheckBox c in groupBox_CheckBoxes.Controls.OfType<CheckBox>()
 
             // Access checkBox Controls in groupBox
-            var checkedBoxes = 0;
-            foreach ( var gb in groupBox_CheckBoxes.Controls.OfType<GroupBox>() )
+            foreach (var item in groupBox_CheckBoxes.Controls.OfType<CheckBox>())
             {
-                foreach (var item in gb.Controls.OfType<CheckBox>() )
+                if (item.Checked)
                 {
-                    if (item is CheckBox cb)
-                    {
-                        MessageBox.Show("This is a checkbox");
-                        if (cb.Checked)
-                        {
-                            checkedBoxes++;
-                        }
-                    }
+                    thirdBox_total += 7;
                 }
             }
-            MessageBox.Show($"{checkedBoxes} boxes are checked.");
             Update_Total_Amount_Due();
         }
 
@@ -126,51 +105,6 @@ namespace Question3
         {
             totalAmountDue = firstBox_total + secondBox_total + thirdBox_total;
             label2.Text = totalAmountDue.ToString();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox9_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 

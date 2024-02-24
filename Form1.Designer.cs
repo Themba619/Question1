@@ -213,7 +213,7 @@
             this.groupBox_CheckBoxes.TabIndex = 10;
             this.groupBox_CheckBoxes.TabStop = false;
             this.groupBox_CheckBoxes.Text = "Toppings (each @ R7)";
-            this.groupBox_CheckBoxes.Enter += new System.EventHandler(this.groupBox_CheckBoxes_Click);
+            this.groupBox_CheckBoxes.Enter += new System.EventHandler(this.groupBox_CheckBoxes_CheckedChange);
             // 
             // checkBox9
             // 
@@ -224,7 +224,7 @@
             this.checkBox9.TabIndex = 8;
             this.checkBox9.Text = "Grounded Beef";
             this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            
             // 
             // checkBox8
             // 
@@ -235,7 +235,7 @@
             this.checkBox8.TabIndex = 7;
             this.checkBox8.Text = "Shedded Chicken";
             this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            
             // 
             // checkBox7
             // 
@@ -246,7 +246,7 @@
             this.checkBox7.TabIndex = 6;
             this.checkBox7.Text = "Spinach";
             this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            
             // 
             // checkBox6
             // 
@@ -257,7 +257,7 @@
             this.checkBox6.TabIndex = 5;
             this.checkBox6.Text = "Dried Shrimp";
             this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            
             // 
             // checkBox5
             // 
@@ -268,7 +268,7 @@
             this.checkBox5.TabIndex = 4;
             this.checkBox5.Text = "Pineapple";
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            
             // 
             // checkBox4
             // 
@@ -279,7 +279,7 @@
             this.checkBox4.TabIndex = 3;
             this.checkBox4.Text = "Jalapeno";
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            
             // 
             // checkBox3
             // 
@@ -290,7 +290,7 @@
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Mushroom";
             this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            
             // 
             // checkBox2
             // 
@@ -301,7 +301,7 @@
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Extra Cheese";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+           
             // 
             // checkBox1
             // 
@@ -312,7 +312,7 @@
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Pepperoni";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            
             // 
             // Form1
             // 
